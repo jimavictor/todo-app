@@ -33,6 +33,9 @@ Your users should be able to:
 
 ### Links
 
+- Solution URL: [solution URL](https://github.com/jimavictor/todo-app)
+- Live Site: [live site](https://jv-todo-app.netlify.app/)
+
 ## My process
 
 ### Built with
