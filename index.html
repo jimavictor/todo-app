@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      type="image/png"
+      sizes="16x16"
+      rel="icon"
+      href="https://img.icons8.com/nolan/64/note.png"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>todo-app</title>
+  </head>
+  <body>
+    <div class="todo-app">
+      <div class="title">
+        <h1>TODO</h1>
+        <img class="mode-dark" src="./images/icon-moon.svg" alt="mode-icon" />
+        <img class="mode-light" src="./images/icon-sun.svg" alt="mode-icon" />
+      </div>
+      <div class="typing">
+        <input
+          type="text"
+          id="input"
+          name="item1"
+          placeholder="Add items here..."
+        />
+      </div>
+
+      <div class="list-container">
+        <div class="list">
+          <div class="item">
+            <span>
+              <input type="checkbox" class="items" name="items" />
+              <span>Complete online course</span>
+            </span>
+            <img class="cross" src="./images/icon-cross.svg" alt="icon-cross" />
+          </div>
+          <div class="item">
+            <span>
+              <input type="checkbox" class="items" name="items" />
+              <span>Jog around the Park</span><br />
+            </span>
+            <img class="cross" src="./images/icon-cross.svg" alt="icon-cross" />
+          </div>
+          <div class="item">
+            <span>
+              <input type="checkbox" class="items" name="items" />
+              <span>10 minutes meditation</span><br />
+            </span>
+            <img class="cross" src="./images/icon-cross.svg" alt="icon-cross" />
+          </div>
+          <div class="item">
+            <span>
+              <input type="checkbox" class="items" name="items" />
+              <span>Read for 1 hour</span><br />
+            </span>
+            <img class="cross" src="./images/icon-cross.svg" alt="icon-cross" />
+          </div>
+          <div class="item">
+            <span>
+              <input type="checkbox" class="items" name="items" />
+              <span>Pick up groceries</span><br /></span
+            ><img
+              class="cross"
+              src="./images/icon-cross.svg"
+              alt="icon-cross"
+            />
+          </div>
+        </div>
+        <div class="filter-container">
+          <span class="item-left"><span class="number"></span> items left</span>
+          <div class="filter-desktop">
+            <span class="all">All</span>
+            <span class="active">Active</span>
+            <span class="completed">Completed</span>
+          </div>
+          <span class="clear-completed">Clear Completed</span>
+        </div>
+      </div>
+      <div class="filter-mobile">
+        <span class="wrapper">
+          <span class="all-mobile">All</span>
+          <span class="active-mobile">Active</span>
+          <span class="completed-mobile">Completed</span>
+        </span>
+      </div>
+      <span class="drag-info"> Drag and drop to reorder list</span>
+    </div>
+    <script src="https://raw.githack.com/SortableJS/Sortable/master/Sortable.js"></script>
+    <script type="module" src="script.js"></script>
+  </body>
+</html>

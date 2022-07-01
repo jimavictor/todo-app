@@ -1,0 +1,217 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  background: url("./images/bg-desktop-light.jpg");
+  background-repeat: no-repeat;
+  background-size: 100vw 20%;
+  background-size: 100vw 37%;
+  font-size: 18px;
+  font-weight: 400;
+  font-family: "Josefin Sans", sans-serif;
+  overflow-x: hidden;
+  padding-bottom: 690px;
+}
+
+h1 {
+  font-weight: 700;
+}
+.mode-light,
+.mode-dark {
+  cursor: pointer;
+}
+.mode-light {
+  display: none;
+}
+.title {
+  display: flex;
+  color: white;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 22px;
+}
+
+.todo-app {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 60%;
+  min-width: 300px;
+  max-width: 550px;
+  height: 200px;
+  margin-top: 65px;
+}
+.filter-desktop {
+  width: 120px;
+  display: none;
+  justify-content: space-between;
+}
+.filter-mobile {
+  width: 100%;
+  min-width: 300px;
+  max-width: 550px;
+  display: flex;
+  text-align: center;
+  background-color: white;
+  box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.2);
+
+  margin-top: 19px;
+  padding: 10px;
+  border-radius: 10px;
+  justify-content: center;
+}
+.wrapper {
+  width: 180px;
+  display: flex;
+  justify-content: space-between;
+}
+.filter-container {
+  background-color: red;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  padding: 20px;
+  font-size: 12px;
+}
+.typing {
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.item:first-child {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.white {
+  color: white;
+}
+.typing,
+.item {
+  border-bottom: 1px solid hsl(233, 11%, 84%);
+  background-color: white;
+  padding: 20px;
+}
+.list {
+  display: flex;
+  flex-direction: column;
+}
+.list-container {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.2);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.drag-info {
+  margin-top: 40px;
+  text-align: center;
+}
+.write {
+  outline: none;
+  width: 100%;
+}
+.dark-mode {
+  background-color: hsl(235, 21%, 11%);
+  background-image: url("./images/bg-desktop-dark.jpg");
+}
+.dark-items {
+  color: white;
+  border-bottom: 1px solid hsl(237, 14%, 26%);
+  background-color: hsl(235, 24%, 19%);
+}
+.filter-container {
+  color: hsl(234, 11%, 52%);
+}
+.light-mode {
+  background-color: white;
+  background-image: url("./images/bg-desktop-light.jpg");
+}
+.typing > input {
+  outline: none;
+  border: none;
+}
+#input {
+  width: 100%;
+  height: 100%;
+}
+input[type="checkbox"] {
+  appearance: none;
+  border: 1px solid grey;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+}
+
+input[type="checkbox"]:hover {
+  cursor: pointer;
+  border: 1px solid hsl(192, 100%, 67%);
+}
+input:checked {
+  background-repeat: no-repeat;
+  background: url("./images/icon-check.svg") no-repeat,
+    -webkit-gradient(linear, left top, left bottom, from(hsl(192, 100%, 67%)), to(hsl(280, 87%, 65%)));
+  background-position: center;
+}
+.active:hover,
+.all:hover,
+.completed:hover,
+.all-mobile:hover,
+.active-mobile:hover,
+.completed-mobile:hover,
+.clear-completed:hover {
+  cursor: pointer;
+  color: hsl(237, 14%, 26%);
+}
+.clear-completed:active {
+  color: hsl(192, 100%, 67%);
+}
+.cross {
+  display: none;
+  cursor: pointer;
+}
+.item-left {
+  color: hsl(234, 11%, 52%);
+}
+.dark-text:hover {
+  color: white;
+}
+.new-item,
+.taskComplete {
+  margin-left: 6px;
+}
+.add-black {
+  color: black;
+}
+.check {
+  color: gray;
+  text-decoration: line-through;
+}
+.textDecor {
+  color: inherit;
+  text-decoration: none;
+}
+@media (min-width: 768px) {
+  .filter-mobile {
+    display: none;
+  }
+  .filter-desktop {
+    display: flex;
+  }
+}
