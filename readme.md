@@ -33,9 +33,6 @@ Your users should be able to:
 
 ### Links
 
-- Solution URL: [solution URL](https://github.com/jimavictor/rest-countries-api-app)
-- Live Site: [live site](https://jv-rest-countries.netlify.app/)
-
 ## My process
 
 ### Built with
