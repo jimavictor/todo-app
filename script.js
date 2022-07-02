@@ -44,7 +44,7 @@ let activeMobileState = false;
 let allMobileState = false;
 let completedMobileState = false;
 
-new Sortable(list, { animation: 150 });
+// new Sortable(list, { animation: 150 });
 
 if (darkMode == "true") {
   enableDark();

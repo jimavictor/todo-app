@@ -42,22 +42,22 @@ function addItems(e) {
     let myDiv = document.createElement("div");
     let myImg = document.createElement("img");
     let mySpan = document.createElement("span");
-    let mySpann = document.createElement("span");
+    let myLabel = document.createElement("label");
     let myInput = document.createElement("input");
 
     myInput.type = "checkbox";
     myInput.className = "items";
     myImg.className = "cross";
-    mySpann.className = "new-item";
+    myLabel.className = "new-item";
     myImg.src = "./images/icon-cross.svg";
     myDiv.className = "item";
     let darkMode = localStorage.getItem("darkMode");
     if (darkMode == "true") {
       myDiv.classList.add("dark-items");
     }
-    mySpann.innerText = input.value;
+    myLabel.innerText = input.value;
     input.value = "";
-    mySpan.append(myInput, mySpann);
+    mySpan.append(myInput, myLabel);
     myDiv.append(mySpan, myImg);
     list.appendChild(myDiv);
   }
@@ -89,17 +89,13 @@ function addItems(e) {
   todoItemsArray.forEach((item) => {
     onItemHover(item);
   });
-  todoItemsArray.forEach(() => {
-    let darkMode = localStorage.getItem("darkMode");
-    if (darkMode == "true") {
-    }
-  });
+
   displayItemsLeft();
 }
 
 function checkItem(item) {
   if (item.checked == true) {
-    item.parentNode.getElementsByTagName("span")[0].classList.add("check");
+    item.parentNode.getElementsByTagName("label")[0].classList.add("check");
     if (activeState == true || activeMobileState == true) {
       [...document.querySelectorAll(".check")].forEach((elem) => {
         elem.parentNode.parentNode.style.display = "none";
@@ -107,7 +103,7 @@ function checkItem(item) {
       });
     }
   } else {
-    item.parentNode.getElementsByTagName("span")[0].classList.remove("check");
+    item.parentNode.getElementsByTagName("label")[0].classList.remove("check");
   }
 }
 
