@@ -89,6 +89,11 @@ function addItems(e) {
   todoItemsArray.forEach((item) => {
     onItemHover(item);
   });
+  todoItemsArray.forEach(() => {
+    let darkMode = localStorage.getItem("darkMode");
+    if (darkMode == "true") {
+    }
+  });
   displayItemsLeft();
 }
 
@@ -126,7 +131,7 @@ function enableDark() {
   active.classList.add("dark-text");
   completed.classList.add("dark-text");
   clearCompleted.classList.add("dark-text");
-  todoItems.forEach((item) => {
+  [...document.querySelectorAll(".item")].forEach((item) => {
     item.classList.add("dark-items");
   });
   if (completedState == true) {
@@ -153,7 +158,7 @@ function disableDark() {
   completed.classList.remove("dark-text");
   clearCompleted.classList.remove("dark-text");
   body.classList.remove("dark-mode");
-  todoItems.forEach((item) => {
+  [...document.querySelectorAll(".item")].forEach((item) => {
     item.classList.remove("dark-items");
   });
   if (completedState == true) {
